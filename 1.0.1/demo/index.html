@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>PrettyModal的demo</title>
+    <script src="//g.alicdn.com/kissy/k/1.4.8/seed-min.js" charset="utf-8"></script>
+    <style type="text/css">
+        /*page*/
+        /*base*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul,ol,li {
+            list-style-type: none;
+        }
+
+        body {
+            font-family: 'Lato', Calibri, Arial, sans-serif;
+            color: #fff;
+            background: #e74c3c;
+        }
+        button {
+            border: none;
+            padding: 0.6em 1.2em;
+            background: #c0392b;
+            color: #fff;
+            font-family: 'Lato', Calibri, Arial, sans-serif;
+            font-size: 1em;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: inline-block;
+            margin: 3px 2px;
+            border-radius: 2px;
+            -webkit-animation: pushFromTop 2s 0.1s forwards;
+            -moz-animation: pushFromTop 2s 0.1s forwards;
+            -ms-animation: pushFromTop 2s 0.1s forwards;
+            -o-animation: pushFromTop 2s 0.1s forwards;
+            animation: pushFromTop 2s 0.1s forwards;
+        }
+        .title {
+            font-size: 40px;
+            margin-bottom: 100px;
+            -webkit-transform-origin: 50% 50%;
+            -moz-transform-origin: 50% 50%;
+            -ms-transform-origin: 50% 50%;
+            -o-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            -webkit-animation: rotateInNewspaper 0.5s both ease-out;
+            -moz-animation: rotateInNewspaper 0.5s both ease-out;
+            -ms-animation: rotateInNewspaper 0.5s both ease-out;
+            -o-animation: rotateInNewspaper 0.5s both ease-out;
+            animation: rotateInNewspaper 0.5s both ease-out;
+            -webkit-animation-delay: 0.5s;
+            -moz-animation-delay: 0.5s;
+            -ms-animation-delay: 0.5s;
+            -o-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+        }
+        .column {
+            margin: 50px;
+            width: 200px;
+        }
+        .more {
+            margin-top: 50px;
+            -webkit-animation: slideInFromRight 1.2s forwards;
+            -moz-animation: slideInFromRight 1.2s forwards;
+            -ms-animation: slideInFromRight 1.2s forwards;
+            -o-animation: slideInFromRight 1.2s forwards;
+            animation: slideInFromRight 1.2s forwards;
+            -webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1);
+            -moz-animation-timing-function: cubic-bezier(1, 0, 0, 1);
+            -ms-animation-timing-function: cubic-bezier(1, 0, 0, 1);
+            -o-animation-timing-function: cubic-bezier(1, 0, 0, 1);
+            animation-timing-function: cubic-bezier(1, 0, 0, 1)
+        }
+    </style>
+</head>
+<body>
+<div class="title">PrettyModal的demo</div>
+<div class="column">
+    <button class="pm-trigger" data-effect="pm-slide1">Slide1</button>
+    <button class="pm-trigger" data-effect="pm-slide2">Slide2</button>
+    <button class="pm-trigger" data-effect="pm-slide3">Slide3</button>
+    <button class="pm-trigger" data-effect="pm-glue">Glue</button>
+    <button class="pm-trigger" data-effect="pm-kontext">Kontext</button>
+    <button class="pm-trigger" data-effect="pm-newspaper">Newspaper</button>
+    <button class="pm-trigger" data-effect="pm-move">Move</button>
+    <button class="pm-trigger" data-effect="pm-stick">Stick</button>
+    <button class="pm-trigger" data-effect="pm-earthquake">earthquake</button>
+    <button class="pm-trigger" data-effect="pm-circle">Circle</button>
+    <button class="pm-trigger" data-effect="pm-pulse">Pulse</button>
+</dvi>
+<div class="more">更多炫酷效果正在紧急研发中,敬请期待...</div>
+<div class="J_PrettyModal"></div>
+<script>
+    var S = KISSY;
+    if (S.Config.debug) {
+        var debugPath = "http://localhost:5555/";
+        S.config({
+            packages:[
+                {
+                    name:"kg/pretty-modal/1.0.1",
+                    path:debugPath,
+                    charset:"utf-8",
+                    ignorePackageNameInUri: true
+                }
+            ]
+        });
+    }
+    S.use('kg/pretty-modal/1.0.1/index', function (S, PrettyModal) {
+        var pm = new PrettyModal({
+            $target: '.J_PrettyModal',
+            htmlBase: false,              //组件是否依赖html结构，默认为false，不依赖html结构
+            pmTitle: 'Modal Dialog',      //标题，可以带html tag
+            pmContent: '<ul><li><strong>Read:</strong> modal windows will probably tell yous something important so do not forget to read what they say.</li><li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li><li><strong>Close:</strong> click on the button below to close the modal.</li></ul>'        // 内容，可以带html tag
+        });
+        pm.render();
+    })
+</script>
+</body>
+</html>
+

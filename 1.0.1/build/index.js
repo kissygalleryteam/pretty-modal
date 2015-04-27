@@ -1,4 +1,4 @@
-KISSY.add('kg/pretty-modal/1.0.0/index',["node","event","kg/xtemplate/3.3.3/runtime","base","./pm","./pmbase.css","./pmeffects.css"],function(S ,require, exports, module) {
+KISSY.add('kg/pretty-modal/1.0.1/index',["node","event","kg/xtemplate/3.3.3/runtime","base","./pm","./pmbase.css","./pmeffects.css"],function(S ,require, exports, module) {
  var $ = require('node').all;
 var Event = require('event');
 var XTemplate = require("kg/xtemplate/3.3.3/runtime");

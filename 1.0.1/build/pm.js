@@ -1,4 +1,4 @@
-KISSY.add('kg/pretty-modal/1.0.0/pm',[],function(S ,require, exports, module) {
+KISSY.add('kg/pretty-modal/1.0.1/pm',[],function(S ,require, exports, module) {
 
 
 var ret = module.exports = function pm(undefined){

@@ -1,1 +1,0 @@
-KISSY.add("kg/pretty-modal/1.0.0/lib/main",["node","base"],function(e,n,a,i){var t=(n("node").all,n("base"));i.exports=t.extend({initializer:function(){}},{ATTRS:{}})});

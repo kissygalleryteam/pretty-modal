@@ -1,9 +1,0 @@
-<div class="pm-modal">
-	<div class="pm-content">
-		<h3>{{{$pmTitle}}}</h3>
-		<div>
-			{{{$pmContent}}}
-			<button class="pm-close">Close me!</button>
-		</div>
-	</div>
-</div>

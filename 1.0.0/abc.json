@@ -1,0 +1,9 @@
+{
+    "name": "pretty-modal",
+    "type": "kpm",
+    "kissy":"1.4.8",
+    "builder": "@ali/builder-kpm",
+    "options": {
+
+    }
+}

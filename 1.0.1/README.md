@@ -9,7 +9,7 @@ PrettyModal。
 ```
 ## 初始化组件
 		
-    S.use('kg/pretty-modal/1.0.1/index', function (S, PrettyModal) {
+    S.use('kg/Pretty-modal/1.0.0/index', function (S, PrettyModal) {
         var pm = new PrettyModal({
             $target: '.J_PrettyModal',
             htmlBase: false,              //组件是否依赖html结构，默认为false，不依赖html结构
